@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pattharaphon | Student Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #0b1020;
+  --panel: #141c30;
+  --panel2: #19243b;
+  --text: #f1f5ff;
+  --muted: #9ba9c5;
+  --blue: #7c9cff;
+  --purple: #b59aff;
+  --border: rgba(177,195,255,.15);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans Thai', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 80% 0%, #28245a 0%, transparent 35%),
+    radial-gradient(ellipse at 0% 50%, #102e4b 0%, transparent 32%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11,16,32,.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.logo span { color: var(--blue); }
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.nav-links a:hover { color: white; }
+
+.hero {
+  padding: 78px 0 58px;
+  display: grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--purple);
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.3;
+  margin: 16px 0;
+}
+
+h1 span {
+  background: linear-gradient(90deg, #85a9ff, #c5a5ff);
+  color: transparent;
+  background-clip: text;
+}
+
+.intro {
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 580px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 19px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  transition: .2s;
+}
+
+.btn-primary {
+  background: linear-gradient(110deg, #627ff0, #9068dc);
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+.profile-card {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 30px;
+  background: linear-gradient(145deg, #202d4b, #121a2d);
+  box-shadow: 0 25px 70px #0003;
+}
+
+.avatar {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #8aa7ff, #bc9bff);
+  margin-bottom: 20px;
+}
+
+.profile-card h2 { margin: 0 0 5px; font-size: 22px; }
+
+.profile-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.profile-line {
+  border-top: 1px solid var(--border);
+  margin-top: 22px;
+  padding-top: 17px;
+  color: #d5def5;
+  font-size: 14px;
+  line-height: 2;
+}
+
+section { padding: 40px 0; }
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  font-size: 27px;
+  margin: 0 0 5px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.count { color: var(--blue); font-size: 14px; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  background: linear-gradient(145deg, #18233a, #11192b);
+  transition: .25s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  border-color: #8097ff88;
+  box-shadow: 0 15px 40px #0002;
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  border-radius: 14px;
+  background: #718cff20;
+}
+
+.tag {
+  border: 1px solid var(--border);
+  color: var(--purple);
+  border-radius: 30px;
+  padding: 4px 10px;
+  font-size: 11px;
+}
+
+.project h3 { font-size: 19px; margin: 20px 0 9px; }
+
+.project p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.tech {
+  background: #ffffff09;
+  border: 1px solid var(--border);
+  padding: 5px 9px;
+  border-radius: 7px;
+  font-size: 11px;
+  color: #c7d3f4;
+}
+
+.project-link {
+  display: inline-block;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.project-link:hover { color: white; }
+
+.about-box {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #141c30b8;
+  padding: 27px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.skill {
+  background: #718cff17;
+  border: 1px solid var(--border);
+  padding: 9px 14px;
+  border-radius: 10px;
+  color: #dce5ff;
+  font-size: 13px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 55px;
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .nav-inner { min-height: 62px; }
+  .nav-links { gap: 12px; font-size: 12px; }
+  .hero { grid-template-columns: 1fr; padding-top: 48px; gap: 25px; }
+  .projects { grid-template-columns: 1fr; }
+  .section-heading h2 { font-size: 23px; }
+  .profile-card { padding: 23px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#">P<span>.</span> Portfolio</a>
+    <div class="nav-links">
+      <a href="#home">หน้าหลัก</a>
+      <a href="#projects">ผลงาน</a>
+      <a href="#about">เกี่ยวกับฉัน</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  <header class="hero" id="home">
+    <div>
+      <div class="eyebrow">WELCOME TO MY PORTFOLIO</div>
+      <h1>สวัสดีครับ<br>ผม <span>ภัทรพล แก้วแท้</span></h1>
+      <p class="intro">
+        ยินดีต้อนรับสู่เว็บไซต์รวบรวมผลงานของผม
+        พื้นที่สำหรับนำเสนอแบบฝึกหัด โครงงาน และโปรเจกต์
+        ที่ได้พัฒนาระหว่างการศึกษา
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">ดูผลงานของฉัน ↓</a>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+
+    <aside class="profile-card">
+      <div class="avatar">👨‍💻</div>
+      <h2>ภัทรพล แก้วแท้</h2>
+      <p>Student · Computer Science / IT</p>
+      <div class="profile-line">
+        🎓 รหัสนักศึกษา: 664245024<br>
+        💻 สาขาวิทยาการคอมพิวเตอร์<br>
+        🚀 สนใจการพัฒนาโปรแกรมและเว็บไซต์
+      </div>
+    </aside>
+  </header>
+
+  <section id="projects">
+    <div class="section-heading">
+      <div>
+        <h2>ผลงานของฉัน<span style="color:#91aaff">.</span></h2>
+        <p>โปรเจกต์และแบบฝึกหัดที่ได้ลงมือทำ</p>
+      </div>
+      <div class="count">SELECTED WORKS · 04</div>
+    </div>
+
+    <div class="projects">
+
+      <article class="project">
+        <div class="project-top">
+          <div class="project-icon">📊</div>
+          <span class="tag">ASSIGNMENT 01</span>
+        </div>
+        <h3>งานที่ 1 — โครงสร้างข้อมูลรถยนต์</h3>
+        <p>รวบรวมและจัดการข้อมูลรถยนต์สำหรับใช้ในระบบแนะนำรถยนต์</p>
+        <div class="techs">
+          <span class="tech">Python</span>
+          <span class="tech">Google Colab</span>
+        </div>
+        <a class="project-link" href="#" target="_blank">เปิดดูผลงาน ↗</a>
+      </article>
+
+      <article class="project">
+        <div class="project-top">
+          <div class="project-icon">🔎</div>
+          <span class="tag">ASSIGNMENT 02</span>
+        </div>
+        <h3>งานที่ 2 — วิเคราะห์ข้อมูลรถยนต์</h3>
+        <p>ศึกษา วิเคราะห์คุณสมบัติ และความสัมพันธ์ของข้อมูลรถยนต์</p>
+        <div class="techs">
+          <span class="tech">Python</span>
+          <span class="tech">Data Analysis</span>
+        </div>
+        <a class="project-link" href="#" target="_blank">เปิดดูผลงาน ↗</a>
+      </article>
+
+      <article class="project">
+        <div class="project-top">
+          <div class="project-icon">📝</div>
+          <span class="tag">ASSIGNMENT 03</span>
+        </div>
+        <h3>งานที่ 3 — แบบฝึกหัด</h3>
+        <p>รวบรวมแบบฝึกหัดและเอกสารประกอบการเรียนในรายวิชา</p>
+        <div class="techs">
+          <span class="tech">Canva</span>
+          <span class="tech">Presentation</span>
+        </div>
+        <a class="project-link" href="#" target="_blank">เปิดดูผลงาน ↗</a>
+      </article>
+
+      <article class="project">
+        <div class="project-top">
+          <div class="project-icon">🚘</div>
+          <span class="tag">FINAL PROJECT</span>
+        </div>
+        <h3>ระบบแนะนำรถยนต์</h3>
+        <p>เว็บแอปพลิเคชันแนะนำรถยนต์ด้วย Graph Database (Neo4j) และ Streamlit</p>
+        <div class="techs">
+          <span class="tech">Python</span>
+          <span class="tech">Streamlit</span>
+          <span class="tech">Neo4j</span>
+        </div>
+        <a class="project-link" href="#" target="_blank">เปิดเว็บไซต์ ↗</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-heading">
+      <div>
+        <h2>เกี่ยวกับเว็บไซต์<span style="color:#91aaff">.</span></h2>
+        <p>About this portfolio</p>
+      </div>
+    </div>
+    <div class="about-box">
+      เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมผลงานและโปรเจกต์ระหว่างการศึกษา
+      เพื่อให้สามารถเข้าถึงงานแต่ละชิ้นได้จากหน้าเดียว
+      และใช้เป็นพื้นที่นำเสนอทักษะในการพัฒนาซอฟต์แวร์
+      <div class="skills">
+        <span class="skill">HTML & CSS</span>
+        <span class="skill">Python</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">Neo4j</span>
+        <span class="skill">Streamlit</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Pattharaphon · Student Portfolio<br>
+    Built with HTML, CSS & GitHub Pages
+  </div>
+</footer>
+
+</body>
+</html>
