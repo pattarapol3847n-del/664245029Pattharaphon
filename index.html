@@ -37,11 +37,10 @@
       margin: auto;
     }
 
-    /* Navigation */
     header {
       padding: 22px 0;
       border-bottom: 1px solid rgba(255,255,255,0.1);
-      background: rgba(10, 14, 32, 0.7);
+      background: rgba(10,14,32,0.7);
     }
 
     .navbar {
@@ -74,7 +73,6 @@
       color: #a9a2ff;
     }
 
-    /* Hero */
     .hero {
       padding: 85px 0 65px;
       text-align: center;
@@ -89,15 +87,14 @@
       margin: 0 auto 22px;
       font-size: 3rem;
       background: linear-gradient(135deg, #7468ff, #b17cff);
-      box-shadow: 0 0 45px rgba(126, 105, 255, 0.3);
+      box-shadow: 0 0 45px rgba(126,105,255,0.3);
     }
 
     .eyebrow {
       color: #aaa5ff;
       font-size: 0.9rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      letter-spacing: 1px;
       margin-bottom: 12px;
     }
 
@@ -152,7 +149,6 @@
       color: #e4e5ff;
     }
 
-    /* About */
     .section {
       padding: 35px 0 55px;
     }
@@ -171,36 +167,6 @@
       color: #b7bddb;
     }
 
-    .about-card {
-      max-width: 850px;
-      margin: auto;
-      padding: 25px;
-      border: 1px solid rgba(177, 170, 255, 0.2);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.045);
-    }
-
-    .about-card p {
-      color: #d0d4ed;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .skill {
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(132, 120, 255, 0.14);
-      border: 1px solid rgba(161, 151, 255, 0.25);
-      color: #d9d5ff;
-      font-size: 0.85rem;
-    }
-
-    /* Projects */
     .projects-header {
       display: flex;
       justify-content: space-between;
@@ -232,16 +198,16 @@
       flex-direction: column;
       padding: 24px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(185, 181, 255, 0.17);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(185,181,255,0.17);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
       transition: transform 0.25s, border-color 0.25s;
       min-width: 0;
     }
 
     .project:hover {
       transform: translateY(-5px);
-      border-color: rgba(169, 162, 255, 0.6);
+      border-color: rgba(169,162,255,0.6);
     }
 
     .project-top {
@@ -261,8 +227,8 @@
       font-size: 1.6rem;
       background: linear-gradient(
         135deg,
-        rgba(118, 107, 255, 0.25),
-        rgba(177, 124, 255, 0.2)
+        rgba(118,107,255,0.25),
+        rgba(177,124,255,0.2)
       );
     }
 
@@ -270,8 +236,8 @@
       padding: 4px 10px;
       border-radius: 999px;
       color: #c7c1ff;
-      background: rgba(118, 107, 255, 0.14);
-      border: 1px solid rgba(169, 162, 255, 0.2);
+      background: rgba(118,107,255,0.14);
+      border: 1px solid rgba(169,162,255,0.2);
       font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 0.5px;
@@ -299,7 +265,7 @@
 
     .tech {
       color: #d0d4ee;
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255,255,255,0.06);
       border-radius: 7px;
       padding: 4px 9px;
       font-size: 0.78rem;
@@ -317,33 +283,27 @@
       width: 100%;
       padding: 10px 13px;
       border-radius: 10px;
-      border: 1px solid rgba(169, 162, 255, 0.25);
+      border: 1px solid rgba(169,162,255,0.25);
       color: #e0ddff;
-      background: rgba(118, 107, 255, 0.08);
+      background: rgba(118,107,255,0.08);
       font-size: 0.9rem;
       transition: background 0.2s, border-color 0.2s;
       overflow-wrap: anywhere;
     }
 
     .project-link:hover {
-      background: rgba(118, 107, 255, 0.2);
+      background: rgba(118,107,255,0.2);
       border-color: #9c92ff;
     }
 
-    .project-link.disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    /* Contact */
     .contact-card {
       max-width: 850px;
       margin: auto;
       text-align: center;
       padding: 30px 22px;
       border-radius: 20px;
-      border: 1px solid rgba(185, 181, 255, 0.2);
-      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(185,181,255,0.2);
+      background: rgba(255,255,255,0.045);
     }
 
     .contact-card p {
@@ -386,7 +346,6 @@
 </head>
 
 <body>
-
   <header>
     <div class="container navbar">
       <a class="logo" href="#home">My Portfolio</a>
@@ -404,7 +363,9 @@
       <div class="container">
         <div class="profile-icon" aria-hidden="true">👨‍💻</div>
 
-        <div class="eyebrow">นายภัทรพล แก้วแท้ || เลขประจำตัว 664245029 ||ห้อง 66/43 || สาขาวิทยาการคอมพิวเตอร์</div>
+        <div class="eyebrow">
+          นายภัทรพล แก้วแท้ || เลขประจำตัว 664245029 || ห้อง 66/43 || สาขาวิทยาการคอมพิวเตอร์
+        </div>
 
         <h1>
           My <span class="gradient-text">Portfolio</span>
@@ -421,7 +382,7 @@
 
           <a
             class="button button-outline"
-            href="https://github.com/pattarapol3847n-del/664245024Pattharaphon"
+            href="https://github.com/pattarapol3847n-del/664245029Pattharaphon"
             target="_blank"
             rel="noopener"
           >
@@ -441,7 +402,7 @@
             <h2>ผลงานของฉัน</h2>
           </div>
 
-          <div class="count">SELECTED WORKS · 06</div>
+          <div class="count">SELECTED WORKS · 07</div>
         </div>
 
         <div class="projects-grid">
@@ -453,7 +414,7 @@
               <span class="tag">PROJECT 01</span>
             </div>
 
-            <h3>Pet Recommender System ด้วย Graph</h3>
+            <h3>project1</h3>
 
             <p>
               ระบบแนะนำสัตว์เลี้ยงโดยใช้แนวคิดกราฟ
@@ -614,14 +575,46 @@
             </div>
           </article>
 
-          <!-- งานที่ 6: Final Project -->
+          <!-- งานที่ 6: เพิ่มระบบแนะนำสัตว์เลี้ยงด้วย Neo4j -->
+          <article class="project">
+            <div class="project-top">
+              <div class="project-icon">🐶</div>
+              <span class="tag">PROJECT 06</span>
+            </div>
+
+            <h3>แนะนำสัตว์เลี้ยงด้วย Neo4j</h3>
+
+            <p>
+              ระบบแนะนำเครื่องดื่มที่มีประสิทธิภาพสูงด้วยโครงสร้างฐานข้อมูลแบบกราฟ Neo4j เปิดและรันได้บน Google Colab
+            </p>
+
+            <div class="techs">
+              <span class="tech">Python</span>
+              <span class="tech">Neo4j</span>
+              <span class="tech">Graph Database</span>
+              <span class="tech">Google Colab</span>
+            </div>
+
+            <div class="project-links">
+              <a
+                class="project-link"
+                href="https://colab.research.google.com/drive/1D6TFF4KUGYwc-mGd5LFinEyGVtCuL9lL?usp=sharing"
+                target="_blank"
+                rel="noopener"
+              >
+                💻 เปิด Google Colab ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- งานที่ 7: Final Project -->
           <article class="project">
             <div class="project-top">
               <div class="project-icon">🎓</div>
               <span class="tag">FINAL PROJECT</span>
             </div>
 
-            <h3>งานที่ 6 — FinalProject</h3>
+            <h3>FinalProject</h3>
 
             <p>
               นำเสนอผลงานไฟนอล ขั้นตอนการดำเนินงาน
@@ -637,7 +630,6 @@
             </div>
 
             <div class="project-links">
-              <!-- Google Colab -->
               <a
                 class="project-link"
                 href="https://colab.research.google.com/drive/1knyYulso01mtHPqafsFyrVj-OSdM0mhu?usp=sharing"
@@ -647,7 +639,6 @@
                 💻 เปิด Google Colab ↗
               </a>
 
-              <!-- Streamlit: ใส่ URL เว็บไซต์ Streamlit จริง -->
               <a
                 class="project-link"
                 href="https://pet029-giuwqsauhve7etsc6da9vt.streamlit.app/"
@@ -657,7 +648,6 @@
                 🌐 เปิดเว็บไซต์ Streamlit ↗
               </a>
 
-              <!-- YouTube: ใส่ URL วิดีโอจริง -->
               <a
                 class="project-link"
                 href="https://youtu.be/6euJRkeIkus"
@@ -667,7 +657,6 @@
                 ▶️ ดูวิดีโอ YouTube ↗
               </a>
 
-              <!-- PDF: วาง FinalProject.pdf ไว้ในโฟลเดอร์เดียวกับ index.html -->
               <a
                 class="project-link"
                 href="FinalProject.pdf"
@@ -700,7 +689,7 @@
 
           <a
             class="button button-primary"
-            href="https://github.com/pattarapol3847n-del/664245024Pattharaphon"
+            href="https://github.com/pattarapol3847n-del/664245029Pattharaphon"
             target="_blank"
             rel="noopener"
           >
@@ -721,6 +710,5 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
-
 </body>
 </html>
